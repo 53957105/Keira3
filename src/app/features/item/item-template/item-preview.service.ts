@@ -1327,7 +1327,7 @@ export class ItemPreviewService {
 
     const sellPrice = itemTemplate.SellPrice;
     if (!!sellPrice && sellPrice > 0) {
-      tmpItemPreview += '<br>Sell Price: ' + this.helperService.formatMoney(sellPrice);
+      tmpItemPreview += '<br>出售价格: ' + this.helperService.formatMoney(sellPrice);
     }
 
     return tmpItemPreview;
