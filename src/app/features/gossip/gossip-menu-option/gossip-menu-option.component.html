@@ -19,7 +19,7 @@
 
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="OptionID">OptionID</label>
+            <label class="control-label" for="OptionID">OptionID 选项id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Must be unique for a given menu_id starting from 0 (zero).'"
@@ -28,7 +28,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="OptionIcon">OptionIcon</label>
+            <label class="control-label" for="OptionIcon">OptionIcon 选项图标</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.OptionIcon"
               [config]="{ options: OPTION_ICON, name: 'OptionIcon' }"
@@ -37,7 +37,7 @@
             <input [formControlName]="'OptionIcon'" id="OptionIcon" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="OptionText">OptionText</label>
+            <label class="control-label" for="OptionText">OptionText 选项文字</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Text displayed in the player selectable option. Examples would be: “Learn Dual Spec“. Only if OptionBroadcastTextID contains a valid broadcast_text.ID'"
@@ -45,7 +45,7 @@
             <input [formControlName]="'OptionText'" id="OptionText" type="text" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="OptionBroadcastTextID">OptionBroadcastTextID</label>
+            <label class="control-label" for="OptionBroadcastTextID">OptionBroadcastTextID 广播文字id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The ID of the same text in broadcast_text.ID.'"
@@ -53,7 +53,7 @@
             <input [formControlName]="'OptionBroadcastTextID'" id="OptionBroadcastTextID" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="OptionType">OptionType</label>
+            <label class="control-label" for="OptionType">OptionType 选项类型</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.OptionType"
               [config]="{ options: OPTION_TYPE, name: 'OptionType' }"
@@ -70,7 +70,7 @@
             <input [formControlName]="'OptionNpcFlag'" id="OptionNpcFlag" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="ActionMenuID">ActionMenuID</label>
+            <label class="control-label" for="ActionMenuID">ActionMenuID 动作菜单id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'If you want to create a sub-menu, this is the ID (gossip_menu.entry / gossip_menu_option.menu_id) to link to to create that sub-menu.'"
@@ -78,23 +78,23 @@
             <input [formControlName]="'ActionMenuID'" id="ActionMenuID" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="ActionPoiID">ActionPoiID</label>
+            <label class="control-label" for="ActionPoiID">ActionPoiID 兴趣点id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the `entry` from Points_of_interest.entry'"
+              [tooltip]="'If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the `entry` from Points_of_interest.entry 如果你想在小地图上显示兴趣点(就像城市守卫在你问路时放置标记一样)，这是Points_of_interest.entry的“入口”'"
             ></i>
             <input [formControlName]="'ActionPoiID'" id="ActionPoiID" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="BoxCoded">BoxCoded</label>
+            <label class="control-label" for="BoxCoded">BoxCoded 输入框</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'If you want a box to display where you have to enter a code, this is the field you use.'"
+              [tooltip]="'If you want a box to display where you have to enter a code, this is the field you use. 如果您想要一个框显示您必须在哪里输入代码，这就是您使用的字段。'"
             ></i>
             <input [formControlName]="'BoxCoded'" id="BoxCoded" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="BoxMoney">BoxMoney</label>
+            <label class="control-label" for="BoxMoney">BoxMoney 金额框</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The amount of money the player has to pay for the selected option, the value must be in copper. 10g = 100000 (10g 00s 00c)'"
@@ -102,10 +102,10 @@
             <input [formControlName]="'BoxMoney'" id="BoxMoney" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-xl-2">
-            <label class="control-label" for="BoxText">BoxText</label>
+            <label class="control-label" for="BoxText">BoxText 提示框</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'This is the text of the window that appears that has “Yes” or “No” as clickable buttons. This is useful if you want a Yes/No confirmation window before the script executes'"
+              [tooltip]="'This is the text of the window that appears that has “Yes” or “No” as clickable buttons. This is useful if you want a Yes/No confirmation window before the script executes 这是出现的窗口的文本，将“是”或“否”作为可单击按钮。如果您希望在脚本执行之前有一个Yes/No确认窗口，那么这将非常有用'"
             ></i>
             <input [formControlName]="'BoxText'" id="BoxText" type="text" class="form-control form-control-sm">
           </div>
@@ -149,17 +149,17 @@
                 <i [hidden]="!editorService.isRowSelected(row)" class="fas fa-chevron-right"></i>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="OptionID"               prop="OptionID"              [minWidth]="35"></ngx-datatable-column>
-            <ngx-datatable-column name="OptionIcon"             prop="OptionIcon"            [minWidth]="35"></ngx-datatable-column>
-            <ngx-datatable-column name="OptionText"             prop="OptionText"            [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="OptionBroadcastTextID"  prop="OptionBroadcastTextID" [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="OptionType"             prop="OptionType"            [minWidth]="35"></ngx-datatable-column>
-            <ngx-datatable-column name="OptionNpcFlag"          prop="OptionNpcFlag"         [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="ActionMenuID"           prop="ActionMenuID"          [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="ActionPoiID"            prop="ActionPoiID"           [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="BoxCoded"               prop="BoxCoded"              [minWidth]="50"></ngx-datatable-column>
-            <ngx-datatable-column name="BoxMoney"               prop="BoxMoney"              [minWidth]="35"></ngx-datatable-column>
-            <ngx-datatable-column name="BoxText"                prop="BoxText"               [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="id"               prop="OptionID"              [minWidth]="35"></ngx-datatable-column>
+            <ngx-datatable-column name="图标"             prop="OptionIcon"            [minWidth]="35"></ngx-datatable-column>
+            <ngx-datatable-column name="文本"             prop="OptionText"            [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="广播文字id"  prop="OptionBroadcastTextID" [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="类型"             prop="OptionType"            [minWidth]="35"></ngx-datatable-column>
+            <ngx-datatable-column name="npc标识"          prop="OptionNpcFlag"         [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="动作菜单id"           prop="ActionMenuID"          [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="兴趣点id"            prop="ActionPoiID"           [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="输入框"               prop="BoxCoded"              [minWidth]="50"></ngx-datatable-column>
+            <ngx-datatable-column name="金额框"               prop="BoxMoney"              [minWidth]="35"></ngx-datatable-column>
+            <ngx-datatable-column name="提示框"                prop="BoxText"               [minWidth]="50"></ngx-datatable-column>
             <!-- <ngx-datatable-column name="BoxBroadcastTextID"     prop="BoxBroadcastTextID"    [minWidth]="70"></ngx-datatable-column> -->
           </ngx-datatable>
 

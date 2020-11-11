@@ -13,7 +13,7 @@
   </div>
 
   <div class="content-block">
-    <p class="lead">Select existing</p>
+    <p class="lead">Select existing 选择现有</p>
     <form [formGroup]="selectService.queryForm">
       <div class="row">
         <ng-container [formGroup]="selectService.fields">
@@ -52,11 +52,11 @@
             {{ row.ID }}
           </ng-template>
         </ngx-datatable-column>
-        <ngx-datatable-column name="Title" prop="LogTitle" [minWidth]="60"></ngx-datatable-column>
-        <ngx-datatable-column name="Type" prop="QuestType" [minWidth]="60" [maxWidth]="60"></ngx-datatable-column>
-        <ngx-datatable-column name="Level" prop="QuestLevel" [minWidth]="60" [maxWidth]="60"></ngx-datatable-column>
-        <ngx-datatable-column name="MinLevel" prop="MinLevel" [minWidth]="100" [maxWidth]="100"></ngx-datatable-column>
-        <ngx-datatable-column name="Description" prop="QuestDescription" [minWidth]="100"></ngx-datatable-column>
+        <ngx-datatable-column name="Title 标题" prop="LogTitle" [minWidth]="60"></ngx-datatable-column>
+        <ngx-datatable-column name="Type 类型" prop="QuestType" [minWidth]="60" [maxWidth]="60"></ngx-datatable-column>
+        <ngx-datatable-column name="Level 等级" prop="QuestLevel" [minWidth]="60" [maxWidth]="60"></ngx-datatable-column>
+        <ngx-datatable-column name="MinLevel 最低等级" prop="MinLevel" [minWidth]="100" [maxWidth]="100"></ngx-datatable-column>
+        <ngx-datatable-column name="Description 描述" prop="QuestDescription" [minWidth]="100"></ngx-datatable-column>
       </ngx-datatable>
 
     </div>

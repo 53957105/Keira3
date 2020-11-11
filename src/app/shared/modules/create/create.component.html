@@ -1,6 +1,6 @@
-<p class="h5">Create new</p>
+<p class="h5">Create new 新建</p>
 <label class="control-label" for="id">
-  Create a new <strong>{{ entityTable }}</strong> by selecting an empty <strong>{{ entityIdField }}</strong>:
+  创建一个新的 <strong>{{ entityTable }}</strong> 从选择一个可用的 <strong>{{ entityIdField }}</strong>开始:
 </label>
 <div class="row">
   <div class="form-inline">
@@ -17,13 +17,13 @@
         id="select-button"
         [disabled]="!isIdFree || !idModel"
         (click)="handlerService.select(true, idModel)"
-      ><i class="fa fa-plus"></i> Select</button>
+      ><i class="fa fa-plus"></i> 选用</button>
     </div>
   </div>
   <div class="col-12 mt-1" [hidden]="!idModel" id="id-free-status">
     <small>
       <i class="fas" [ngClass]="{ 'fa-check-circle': isIdFree, 'fa-times-circle': !isIdFree}"></i>
-      The {{ entityIdField }} is {{ isIdFree ? 'free' : 'already in use' }}
+      这个 {{ entityIdField }} {{ isIdFree ? '可以使用' : '已经被使用' }}
     </small>
   </div>
 </div>

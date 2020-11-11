@@ -25,34 +25,34 @@
             <label class="control-label" for="entry">entry</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The unique entry of the item'"
+              [tooltip]="'The unique entry of the item 物品唯一编号'"
             ></i>
             <input [formControlName]="'entry'" id="entry" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-8 col-md-8 col-lg-4 col-xl-3">
-            <label class="control-label" for="name">name</label>
+            <label class="control-label" for="name">name 名称</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The name of the item'"
+              [tooltip]="'The name of the item 物品名称'"
             ></i>
             <input [formControlName]="'name'" id="name" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-7 col-md-7 col-lg-5 col-xl-4">
-            <label class="control-label" for="description">description</label>
+            <label class="control-label" for="description">description 描述</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The description that appears in orange letters at the bottom of the item tooltip.'"
+              [tooltip]="'The description that appears in orange letters at the bottom of the item tooltip. 物品底部橙色描述'"
             ></i>
             <input [formControlName]="'description'" id="description" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-5 col-md-5 col-lg-4 col-xl-3">
-            <label class="control-label" for="ScriptName">ScriptName</label>
+            <label class="control-label" for="ScriptName">ScriptName 脚本名称</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The name of the script that the item should use'"
+              [tooltip]="'The name of the script that the item should use 物品脚本名称'"
             ></i>
             <input [formControlName]="'ScriptName'" id="ScriptName" class="form-control form-control-sm">
           </div>
@@ -61,7 +61,7 @@
 
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="class">class</label>
+            <label class="control-label" for="class">class 类型</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.class"
               [config]="{ options: ITEM_CLASS, name: 'class' }"
@@ -70,7 +70,7 @@
             <input [formControlName]="'class'" id="class" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="subclass">subclass</label>
+            <label class="control-label" for="subclass">subclass 子类型</label>
             <keira-single-value-selector-btn
               *ngIf="editorService.form.controls.class
                 && editorService.form.controls.class.value !== null
@@ -87,15 +87,15 @@
             <input [formControlName]="'subclass'" id="subclass" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="SoundOverrideSubclass">SoundOverride</label>
+            <label class="control-label" for="SoundOverrideSubclass">SoundOverride 声音</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Weapons have special sounds on impact, this field is used to override them sounds by specifying another subclass'"
+              [tooltip]="'Weapons have special sounds on impact, this field is used to override them sounds by specifying another subclass 武器在撞击时具有特殊的声音，此字段用于通过指定另一个子类来覆盖它们的声音'"
             ></i>
             <input [formControlName]="'SoundOverrideSubclass'" id="SoundOverrideSubclass" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="displayid">displayid</label>
+            <label class="control-label" for="displayid">displayid 显示id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The model ID of the item. Controls both the model appearance and the icon.'"
@@ -103,7 +103,7 @@
             <input [formControlName]="'displayid'" id="displayid" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="Quality">Quality</label>
+            <label class="control-label" for="Quality">Quality 品质</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.Quality"
               [config]="{ options: ITEM_QUALITY, name: 'Quality' }"
@@ -112,15 +112,15 @@
             <input [formControlName]="'Quality'" id="Quality" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="BuyCount">BuyCount</label>
+            <label class="control-label" for="BuyCount">BuyCount 购买数量</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The size of the item stack when sold by vendors. If a vendor has limited copies of this item available, every time the vendor list is refreshed (See npc_vendor.incrtime), the number of copies increases by this number.'"
+              [tooltip]="'The size of the item stack when sold by vendors. If a vendor has limited copies of this item available, every time the vendor list is refreshed (See npc_vendor.incrtime), the number of copies increases by this number. 供应商出售的物品堆的大小。'"
             ></i>
             <input [formControlName]="'BuyCount'" id="BuyCount" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="BuyPrice">BuyPrice</label>
+            <label class="control-label" for="BuyPrice">BuyPrice 购买价格</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The price required to pay to buy this item from a vendor, in copper.'"
@@ -128,7 +128,7 @@
             <input [formControlName]="'BuyPrice'" id="BuyPrice" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="SellPrice">SellPrice</label>
+            <label class="control-label" for="SellPrice">SellPrice 出售价格</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The price that the vendor will pay you for the item when you sell it, in copper. 0 if the item cannot be sold to a vendor.'"
@@ -136,7 +136,7 @@
             <input [formControlName]="'SellPrice'" id="SellPrice" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="InventoryType">InventoryType</label>
+            <label class="control-label" for="InventoryType">InventoryType 装备位置</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.InventoryType"
               [config]="{ options: INVENTORY_TYPE, name: 'InventoryType' }"
@@ -148,12 +148,12 @@
             <label class="control-label" for="maxcount">maxcount</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Maximum number of copies of this item which a player can have. Use 0 for infinite.'"
+              [tooltip]="'Maximum number of copies of this item which a player can have. Use 0 for infinite. 玩家可以拥有该物品的最大数量。0表示无穷大。'"
             ></i>
             <input [formControlName]="'maxcount'" id="maxcount" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="stackable">stackable</label>
+            <label class="control-label" for="stackable">stackable 堆叠数量</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The number of copies of this item that can be stacked in the same slot.'"
@@ -161,7 +161,7 @@
             <input [formControlName]="'stackable'" id="stackable" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="startquest">startquest</label>
+            <label class="control-label" for="startquest">startquest 开始任务</label>
             <keira-quest-selector-btn
               [control]="editorService.form.controls.startquest"
               [config]="{ name: 'startquest' }"
@@ -174,7 +174,7 @@
             <input [formControlName]="'startquest'" id="startquest" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="Material">Material</label>
+            <label class="control-label" for="Material">Material 材质</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.Material"
               [config]="{ options: ITEM_MATERIAL, name: 'Material' }"
@@ -183,15 +183,15 @@
             <input [formControlName]="'Material'" id="Material" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RandomProperty">RandomProperty</label>
+            <label class="control-label" for="RandomProperty">RandomProperty 随机属性</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Points to item_enchantment_template.entry and ties in an item’s chance at having a random property attached to it when it shows up for the first time. Cannot be non-zero if also RandomSuffix is non-zero.'"
+              [tooltip]="'Points to item_enchantment_template.entry and ties in an item’s chance at having a random property attached to it when it shows up for the first time. Cannot be non-zero if also RandomSuffix is non-zero. 指向item_enchantment_template.entry,添加一个随机属性当它第一次出现。如果RandomSuffix非零，则不能非零。'"
             ></i>
             <input [formControlName]="'RandomProperty'" id="RandomProperty" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RandomSuffix">RandomSuffix</label>
+            <label class="control-label" for="RandomSuffix">RandomSuffix 随机后缀</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Points to item_enchantment_template.entry and ties in an item’s chance at having a random suffix attached to it when it shows up for the first time. Cannot be non-zero if also RandomProperty is non-zero.'"
@@ -199,7 +199,7 @@
             <input [formControlName]="'RandomSuffix'" id="RandomSuffix" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="BagFamily">BagFamily</label>
+            <label class="control-label" for="BagFamily">BagFamily 袋子</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.BagFamily"
               [config]="{ flags: BAG_FAMILY, name: 'BagFamily' }"
@@ -208,15 +208,15 @@
             <input [formControlName]="'BagFamily'" id="BagFamily" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="ContainerSlots">ContainerSlots</label>
+            <label class="control-label" for="ContainerSlots">ContainerSlots 空间数</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'If the item is a bag, this field controls the number of slots the bag has.'"
+              [tooltip]="'If the item is a bag, this field controls the number of slots the bag has. 如果项目是一个袋子，这个字段控制袋子拥有的槽的数量。'"
             ></i>
             <input [formControlName]="'ContainerSlots'" id="ContainerSlots" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="TotemCategory">TotemCategory</label>
+            <label class="control-label" for="TotemCategory">TotemCategory 图腾类别</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.TotemCategory"
               [config]="{ options: TOTEM_CATEGORY, name: 'TotemCategory' }"
@@ -225,7 +225,7 @@
             <input [formControlName]="'TotemCategory'" id="TotemCategory" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="duration">duration</label>
+            <label class="control-label" for="duration">duration 持续时间</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The duration of the item in seconds ingame time. Set ITEM_FLAGS_CU_DURATION_REAL_TIME in flagsCustom for real time. In that case the item duration will tick even if player is offline.'"
@@ -249,7 +249,7 @@
             <input [formControlName]="'DisenchantID'" id="DisenchantID" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="FoodType">FoodType</label>
+            <label class="control-label" for="FoodType">FoodType 食物类型</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.FoodType"
               [config]="{ options: FOOD_TYPE, name: 'FoodType' }"
@@ -261,7 +261,7 @@
             <label class="control-label" for="minMoneyLoot">minMoneyLoot</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Minimum amount of money contained in the item, in copper.'"
+              [tooltip]="'Minimum amount of money contained in the item, in copper. 物品中包含最少铜币的数量。'"
             ></i>
             <input [formControlName]="'minMoneyLoot'" id="minMoneyLoot" type="number" class="form-control form-control-sm">
           </div>
@@ -269,7 +269,7 @@
             <label class="control-label" for="maxMoneyLoot">maxMoneyLoot</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Maximum amount of money contained in the item, in copper.'"
+              [tooltip]="'Maximum amount of money contained in the item, in copper. 物品中包含最多铜币的数量。'"
             ></i>
             <input [formControlName]="'maxMoneyLoot'" id="maxMoneyLoot" type="number" class="form-control form-control-sm">
           </div>
@@ -277,12 +277,12 @@
             <label class="control-label" for="itemset">itemset</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The ID of the item set that this item belongs to. Item sets are defined in the ItemSet DBC file.'"
+              [tooltip]="'The ID of the item set that this item belongs to. Item sets are defined in the ItemSet DBC file. 此项目所属的项目集的ID。项目集是在ItemSet.DBC文件中定义的。'"
             ></i>
             <input [formControlName]="'itemset'" id="itemset" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="bonding">bonding</label>
+            <label class="control-label" for="bonding">bonding 绑定</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.bonding"
               [config]="{ options: ITEM_BONDING, name: 'bonding' }"
@@ -300,7 +300,7 @@
             </span>
             <div class="row">
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="Flags">Flags</label>
+                <label class="control-label" for="Flags">Flags 标记</label>
                 <keira-flags-selector-btn
                   [control]="editorService.form.controls.Flags"
                   [config]="{ flags: ITEM_FLAGS, name: 'Flags' }"
@@ -309,7 +309,7 @@
                 <input [formControlName]="'Flags'" id="Flags" type="number" class="form-control form-control-sm">
               </div>
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="FlagsExtra">FlagsExtra</label>
+                <label class="control-label" for="FlagsExtra">FlagsExtra 扩展标记</label>
                 <keira-flags-selector-btn
                   [control]="editorService.form.controls.FlagsExtra"
                   [config]="{ flags: ITEM_FLAGS_EXTRA, name: 'FlagsExtra' }"
@@ -318,7 +318,7 @@
                 <input [formControlName]="'FlagsExtra'" id="FlagsExtra" type="number" class="form-control form-control-sm">
               </div>
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="flagsCustom">flagsCustom</label>
+                <label class="control-label" for="flagsCustom">flagsCustom 自定义标记</label>
                 <keira-flags-selector-btn
                   [control]="editorService.form.controls.flagsCustom"
                   [config]="{ flags: ITEM_FLAGS_CUSTOM, name: 'flagsCustom' }"
@@ -336,7 +336,7 @@
             </span>
             <div class="row">
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="PageText">PageText</label>
+                <label class="control-label" for="PageText">PageText 页面文字</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
                   [tooltip]="'The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See page_text.entry'"
@@ -344,7 +344,7 @@
                 <input [formControlName]="'PageText'" id="PageText" type="number" class="form-control form-control-sm">
               </div>
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="PageMaterial">PageMaterial</label>
+                <label class="control-label" for="PageMaterial">PageMaterial 页面材质</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
                   [tooltip]="'The background texture that appears in the page text window. See the PageTextMaterial DBC file for the IDs of all of the material types.'"
@@ -352,7 +352,7 @@
                 <input [formControlName]="'PageMaterial'" id="PageMaterial" type="number" class="form-control form-control-sm">
               </div>
               <div class="form-group col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                <label class="control-label" for="LanguageID">Lang.ID</label>
+                <label class="control-label" for="LanguageID">Lang.ID 语言id</label>
                 <keira-language-selector-btn
                   [config]="{ name: 'LanguageID' }"
                   [control]="editorService.form.controls.LanguageID"
@@ -373,7 +373,7 @@
           </span>
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="AllowableClass">AllowableClass</label>
+            <label class="control-label" for="AllowableClass">AllowableClass 职业要求</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.AllowableClass"
               [config]="{ flags: ALLOWABLE_CLASSES, name: 'AllowableClass' }"
@@ -382,7 +382,7 @@
             <input [formControlName]="'AllowableClass'" id="AllowableClass" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="AllowableRace">AllowableRace</label>
+            <label class="control-label" for="AllowableRace">AllowableRace 种族要求</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.AllowableRace"
               [config]="{ flags: ALLOWABLE_RACES, name: 'AllowableRace' }"
@@ -391,7 +391,7 @@
             <input [formControlName]="'AllowableRace'" id="AllowableRace" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="ItemLevel">ItemLevel</label>
+            <label class="control-label" for="ItemLevel">ItemLevel 物品等级</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Base item level'"
@@ -399,7 +399,7 @@
             <input [formControlName]="'ItemLevel'" id="ItemLevel" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RequiredLevel">Req.Level</label>
+            <label class="control-label" for="RequiredLevel">Req.Level 等级要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The level required to equip the item'"
@@ -407,10 +407,10 @@
             <input [formControlName]="'RequiredLevel'" id="RequiredLevel" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RequiredSkill">Req.Skill</label>
+            <label class="control-label" for="RequiredSkill">Req.Skill 技能要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The skill required to use this item. See the SkillLine DBC file for IDs which can be used here.'"
+              [tooltip]="'The skill required to use this item. See the SkillLine DBC file for IDs which can be used here. 使用此物品所需的技能。请查看SkillLine DBC文件以获得可以在这里使用的id。'"
             ></i>
             <keira-skill-selector-btn
               [config]="{ name: 'RequiredSkill' }"
@@ -419,18 +419,18 @@
             <input [formControlName]="'RequiredSkill'" id="RequiredSkill" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RequiredSkillRank">Req.SkillRank</label>
+            <label class="control-label" for="RequiredSkillRank">Req.SkillRank 技能等级要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The skill rank required to use this item.'"
+              [tooltip]="'The skill rank required to use this item. 使用此物品所需的技能等级。'"
             ></i>
             <input [formControlName]="'RequiredSkillRank'" id="RequiredSkillRank" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="requiredspell">Req.spell</label>
+            <label class="control-label" for="requiredspell">Req.spell 法术要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The required spell that the player needs to have to use this item.'"
+              [tooltip]="'The required spell that the player needs to have to use this item. 玩家使用该物品所需要的法术'"
             ></i>
             <keira-spell-selector-btn
               [control]="editorService.form.controls.requiredspell"
@@ -440,7 +440,7 @@
             <input [formControlName]="'requiredspell'" id="requiredspell" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="requiredhonorrank">Req.honorrank</label>
+            <label class="control-label" for="requiredhonorrank">Req.honorrank 荣誉等级要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The honor rank required to use this item.'"
@@ -461,7 +461,7 @@
             <input [formControlName]="'RequiredCityRank'" id="RequiredCityRank" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RequiredReputationFaction">Req.Rep.Faction</label>
+            <label class="control-label" for="RequiredReputationFaction">Req.Rep.Faction 派系要求</label>
             <keira-faction-selector-btn
               [config]="{ name: 'RequiredReputationFaction' }"
               [control]="editorService.form.controls.RequiredReputationFaction"
@@ -469,7 +469,7 @@
             <input [formControlName]="'RequiredReputationFaction'" id="RequiredReputationFaction" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RequiredReputationRank">Req.Rep.Rank</label>
+            <label class="control-label" for="RequiredReputationRank">Req.Rep.Rank 声望要求</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.RequiredReputationRank"
               [config]="{ options: FACTION_RANK, name: 'RequiredReputationRank' }"
@@ -481,12 +481,12 @@
             <label class="control-label" for="RequiredDisenchantSkill">Req.Disenchant</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The required skill proficiency in disenchanting that the player needs to have to be able to disenchant this item.'"
+              [tooltip]="'The required skill proficiency in disenchanting that the player needs to have to be able to disenchant this item. 解除附魔所需的熟练技能，玩家必须能够解除该物品的附魔。'"
             ></i>
             <input [formControlName]="'RequiredDisenchantSkill'" id="RequiredDisenchantSkill" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="Map">Map</label>
+            <label class="control-label" for="Map">Map 地图</label>
             <keira-map-selector-btn
               [config]="{ name: 'Map' }"
               [control]="editorService.form.controls.Map"
@@ -498,14 +498,14 @@
             <input [formControlName]="'Map'" id="Map" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="area">area</label>
+            <label class="control-label" for="area">area 区域</label>
             <keira-area-selector-btn
               [config]="{ name: 'area' }"
               [control]="editorService.form.controls.area"
             ></keira-area-selector-btn>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The ID of the zone in which this item can be used.'"
+              [tooltip]="'The ID of the zone in which this item can be used. 可使用此物品的区域ID。'"
             ></i>
             <input [formControlName]="'area'" id="area" type="number" class="form-control form-control-sm">
           </div>
@@ -517,12 +517,12 @@
             ></keira-holiday-selector-btn>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'See the Holidays DBC file for the IDs of all of the holidays.'"
+              [tooltip]="'See the Holidays DBC file for the IDs of all of the holidays. 查看holiday DBC文件以获得所有假期的id。'"
             ></i>
             <input [formControlName]="'HolidayId'" id="HolidayId" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="lockid">lockid</label>
+            <label class="control-label" for="lockid">lockid 锁id</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The lock entry ID that this item (which serves as a key) is tied to. This field is used in key-door mechanics. See the Lock DBC file.'"
@@ -533,7 +533,7 @@
       </div>
       <div class="content-block">
         <span class="category-title">
-            Resistance <i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'Related resistance per type.'"></i>
+            Resistance 抗性 <i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'Related resistance per type.'"></i>
           </span>
         <div class="row">
           <div
@@ -548,14 +548,14 @@
       </div>
       <div class="content-block">
         <span class="category-title">
-            Stats
+            Stats 属性
           </span>
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-lg-4 col-xl-3">
             <label class="control-label" for="ScalingStatDistribution">ScalingStatDistribution</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear) use like static stats.'"
+              [tooltip]="'Similar to Static Stats these are the Stats that grow along with the users level (mainly heirloom leveling gear) use like static stats. 与静态状态类似，这些状态会随着用户等级(主要是传家宝等级)的增加而增加。'"
             ></i>
             <input [formControlName]="'ScalingStatDistribution'" id="ScalingStatDistribution" type="number" class="form-control form-control-sm">
           </div>
@@ -568,7 +568,7 @@
             <input [formControlName]="'ScalingStatValue'" id="ScalingStatValue" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-lg-4 col-xl-3">
-            <label class="control-label" for="StatsCount">count</label>
+            <label class="control-label" for="StatsCount">count 数量</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'When an item has entries in stat_type, this must be updated to display those entries (Unknown how this works).'"
@@ -584,7 +584,7 @@
           >
             <div class="row">
               <div class="col-12">
-                <label class="control-label" for="stat_type{{ i }}">type{{ i }}</label>
+                <label class="control-label" for="stat_type{{ i }}">type{{ i }} 类型</label>
                 <keira-single-value-selector-btn
                   [control]="editorService.form.controls['stat_type' + i]"
                   [config]="{ options: STAT_TYPE, name: 'stat_type' + i }"
@@ -593,7 +593,7 @@
                 <input [formControlName]="'stat_type' + i" id="stat_type{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="stat_value{{ i }}">value{{ i }}</label>
+                <label class="control-label" for="stat_value{{ i }}">value{{ i }} 数值</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
                   [tooltip]="'The value to change the stat type to.'"
@@ -609,11 +609,11 @@
       <div class="content-block">
 
         <span class="category-title">
-          Socket
+          Socket 插槽
         </span>
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg col-xl-5">
-            <label class="control-label" for="socketBonus">socketBonus</label>
+            <label class="control-label" for="socketBonus">socketBonus 插槽奖励</label>
             <keira-item-enchantment-selector-btn
               [config]="{ name: 'socketBonus' }"
               [control]="editorService.form.controls.socketBonus"
@@ -621,7 +621,7 @@
             <input [formControlName]="'socketBonus'" id="socketBonus" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg col-xl-5">
-            <label class="control-label" for="GemProperties">GemProperties</label>
+            <label class="control-label" for="GemProperties">GemProperties 宝石属性</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Corresponds to the ID in GemProperties.dbc.'"
@@ -637,7 +637,7 @@
           >
             <div class="row">
               <div class="col-12">
-                <label class="control-label" for="socketColor_{{ i }}">Color_{{ i }}</label>
+                <label class="control-label" for="socketColor_{{ i }}">Color_{{ i }} 颜色</label>
                 <keira-flags-selector-btn
                   [control]="editorService.form.controls['socketColor_' + i]"
                   [config]="{ flags: SOCKET_COLOR, name: 'socketColor_' + i }"
@@ -646,7 +646,7 @@
                 <input [formControlName]="'socketColor_' + i" id="socketColor_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="socketContent_{{ i }}">Content_{{ i }}</label>
+                <label class="control-label" for="socketContent_{{ i }}">Content_{{ i }} 数量</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
                   [tooltip]="'The amount of Gems of SocketColor_' + i"
@@ -660,11 +660,11 @@
       </div>
       <div class="content-block">
         <span class="category-title">
-            Weapon & Armor
+            Weapon & Armor 武器和护甲
           </span>
         <div class="row">
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="armor">armor</label>
+            <label class="control-label" for="armor">armor 护甲</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The armor value of the item.'"
@@ -672,11 +672,11 @@
             <input [formControlName]="'armor'" id="armor" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="ArmorDamageModifier">ArmorDamageModifier</label>
+            <label class="control-label" for="ArmorDamageModifier">ArmorDamageModifier 护甲伤害修饰符</label>
             <input [formControlName]="'ArmorDamageModifier'" id="ArmorDamageModifier" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="delay">delay</label>
+            <label class="control-label" for="delay">delay 延迟</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The time in milliseconds between successive hits.'"
@@ -684,7 +684,7 @@
             <input [formControlName]="'delay'" id="delay" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="ammo_type">ammo_type</label>
+            <label class="control-label" for="ammo_type">ammo_type 弹药类型</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The type of ammunition the item uses. Arrows = 2; Bullets = 3'"
@@ -692,23 +692,23 @@
             <input [formControlName]="'ammo_type'" id="ammo_type" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="RangedModRange">RangModRange</label>
+            <label class="control-label" for="RangedModRange">RangModRange 射程</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Range Modifier for bows/guns/crossbows: Default range is somewhere between 0.3 and 0.4 yards, all blizzard ranged weapons have RangedModRange100'"
+              [tooltip]="'Range Modifier for bows/guns/crossbows: Default range is somewhere between 0.3 and 0.4 yards, all blizzard ranged weapons have RangedModRange100 弓箭/枪/弩的射程调整:默认距离在0.3 - 0.4码之间，所有暴雪远程武器的射程都是100'"
             ></i>
             <input [formControlName]="'RangedModRange'" id="RangedModRange" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="block">block</label>
+            <label class="control-label" for="block">block 格挡几率</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'If the item is a shield, the block chance of the shield.'"
+              [tooltip]="'If the item is a shield, the block chance of the shield. 如果该物品是盾牌，则该盾牌的格挡几率。'"
             ></i>
             <input [formControlName]="'block'" id="block" type="number" class="form-control form-control-sm">
           </div>
           <div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <label class="control-label" for="MaxDurability">MaxDurability</label>
+            <label class="control-label" for="MaxDurability">MaxDurability 最大耐久度</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The maximum durability of this item.'"
@@ -728,11 +728,11 @@
 
       </div>
       <div class="content-block">
-        <span class="category-title">Damage</span>
+        <span class="category-title">Damage 伤害</span>
         <div class="row">
           <ng-container *ngFor="let i of [1,2]">
             <div class="col-sm-6 col-md-4">
-              <label class="control-label" for="dmg_min{{ i }}">min{{ i }}</label>
+              <label class="control-label" for="dmg_min{{ i }}">min{{ i }} 最小伤害</label>
               <i
                 class="fas fa-info-circle ml-1" [placement]="'auto'"
                 [tooltip]="'The minimum damage of the item.'"
@@ -740,7 +740,7 @@
               <input [formControlName]="'dmg_min' + i" id="dmg_min{{ i }}" type="number" class="form-control form-control-sm">
             </div>
             <div class="col-sm-6 col-md-4">
-              <label class="control-label" for="dmg_max{{ i }}">max{{ i }}</label>
+              <label class="control-label" for="dmg_max{{ i }}">max{{ i }} 最大伤害</label>
               <i
                 class="fas fa-info-circle ml-1" [placement]="'auto'"
                 [tooltip]="'The maximum damage of the item.'"
@@ -748,7 +748,7 @@
               <input [formControlName]="'dmg_max' + i" id="dmg_max{{ i }}" type="number" class="form-control form-control-sm">
             </div>
             <div class="col-sm-6 col-md-4">
-              <label class="control-label" for="dmg_type{{ i }}">type{{ i }}</label>
+              <label class="control-label" for="dmg_type{{ i }}">type{{ i }} 伤害类型</label>
               <keira-single-value-selector-btn
                 [control]="editorService.form.controls['dmg_type' + i]"
                 [config]="{ options: DAMAGE_TYPE, name: 'dmg_type' + i }"
@@ -762,7 +762,7 @@
       </div>
       <div class="content-block">
         <span class="category-title">
-            Spell <i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'The spells that the item can cast or trigger'"></i>
+            Spell 法术<i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'The spells that the item can cast or trigger 该物品可以施放或触发的法术'"></i>
           </span>
         <div class="row">
 
@@ -781,35 +781,35 @@
                 <input [formControlName]="'spellid_' + i" id="spellid_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="spelltrigger_{{ i }}">trigger_{{ i }}</label>
+                <label class="control-label" for="spelltrigger_{{ i }}">trigger_{{ i }} 触发</label>
                 <input [formControlName]="'spelltrigger_' + i" id="spelltrigger_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="spellcharges_{{ i }}">charges_{{ i }}</label>
+                <label class="control-label" for="spellcharges_{{ i }}">charges_{{ i }} 使用次数</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
-                  [tooltip]="'The number of times that the item can cast the spell. If 0, then infinite charges are possible. If negative, then after the number of charges is depleted, the item is deleted as well. If positive, then the item is not deleted after all the charges are spent.'"
+                  [tooltip]="'The number of times that the item can cast the spell. If 0, then infinite charges are possible. If negative, then after the number of charges is depleted, the item is deleted as well. If positive, then the item is not deleted after all the charges are spent. 该物品可以施放魔法的次数。如果是0，那么无限。如果是负数，那么在耗尽后，该物品也被删除。如果是正数，则在耗尽后，该物品不会被删除。'"
                 ></i>
                 <input [formControlName]="'spellcharges_' + i" id="spellcharges_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="spellppmRate_{{ i }}">ppmRate_{{ i }}</label>
+                <label class="control-label" for="spellppmRate_{{ i }}">ppmRate_{{ i }} 触发频率</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
-                  [tooltip]="'The proc per minute rate controlling how often the spell is triggered (if #spelltrigger == 2).'"
+                  [tooltip]="'The proc per minute rate controlling how often the spell is triggered (if #spelltrigger == 2). 控制法术触发频率,每分钟触发次数(如果#spelltrigger == 2)'"
                 ></i>
                 <input [formControlName]="'spellppmRate_' + i" id="spellppmRate_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="spellcooldown_{{ i }}">cooldown_{{ i }}</label>
+                <label class="control-label" for="spellcooldown_{{ i }}">cooldown_{{ i }} 冷却时间</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
-                  [tooltip]="'The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown. Note: this is not the “internal cooldown” of procs commonly found on items such as trinkets with “Chance on hit” effects.'"
+                  [tooltip]="'The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown. Note: this is not the “internal cooldown” of procs commonly found on items such as trinkets with “Chance on hit” effects. 特定法术的冷却时间(毫秒)控制着该法术的使用频率。使用-1可以使用默认的法术冷却时间。注意:这不是通常在物品上发现的“内部冷却时间”，比如“命中概率”效果的饰品。'"
                 ></i>
                 <input [formControlName]="'spellcooldown_' + i" id="spellcooldown_{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="spellcategory_{{ i }}">category_{{ i }}</label>
+                <label class="control-label" for="spellcategory_{{ i }}">category_{{ i }} 法术类型</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
                   [tooltip]="'The category that the spell is in.'"
@@ -820,7 +820,7 @@
                 <label class="control-label" for="spellcategorycooldown_{{ i }}">categorycooldown_{{ i }}</label>
                 <i
                   class="fas fa-info-circle ml-1" [placement]="'auto'"
-                  [tooltip]="'The cooldown time in milliseconds that is applied to all other spells in the category that the triggered spell is also in. Use -1 to use the default spell cooldown.'"
+                  [tooltip]="'The cooldown time in milliseconds that is applied to all other spells in the category that the triggered spell is also in. Use -1 to use the default spell cooldown. 冷却时间(以毫秒为单位)适用于被触发的法术所属类别中的所有其他法术。使用-1可以使用默认的法术冷却时间。'"
                 ></i>
                 <input [formControlName]="'spellcategorycooldown_' + i" id="spellcategorycooldown_{{ i }}" type="number" class="form-control form-control-sm">
               </div>

@@ -77,7 +77,7 @@ export class QuestPreviewService {
   get minLevel(): string { return String(this.questTemplate.MinLevel); }
   get side(): string { return this.helperService.getFactionFromRace(this.questTemplate.AllowableRaces); }
   get races(): number[] { return this.helperService.getRaceString(this.questTemplate.AllowableRaces); }
-  get sharable(): string { return this.questTemplate.Flags & QUEST_FLAG_SHARABLE ? 'Sharable' : 'Not sharable'; }
+  get sharable(): string { return this.questTemplate.Flags & QUEST_FLAG_SHARABLE ? '可分享' : '不可分享'; }
   get startItem(): number { return this.questTemplate.StartItem; }
   get startItemName$(): Promise<string> { return this.mysqlQueryService.getItemNameById(this.startItem); }
   get objectiveText(): string { return this.questTemplate.LogDescription; }

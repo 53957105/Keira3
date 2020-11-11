@@ -17,7 +17,7 @@
 
       <div class="content-block">
 
-        <span class="category-title">Base</span>
+        <span class="category-title">Base 基础</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
@@ -30,7 +30,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <label class="control-label" for="LogTitle">LogTitle</label>
+            <label class="control-label" for="LogTitle">LogTitle 标题</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Title of the quest'"
@@ -39,7 +39,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="QuestType">QuestType</label>
+            <label class="control-label" for="QuestType">QuestType 类型</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.QuestType"
               [config]="{ options: QUEST_TYPE, name: 'QuestType' }"
@@ -49,7 +49,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2">
-            <label class="control-label" for="QuestLevel">QuestLevel</label>
+            <label class="control-label" for="QuestLevel">QuestLevel 等级</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Level of the quest. Players receive full experience amount only if their level is <= Level+5. If -1, the player level will be used as Quest Level for experience calculation.'"
@@ -58,25 +58,25 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="MinLevel">MinLevel</label>
+            <label class="control-label" for="MinLevel">MinLevel 最低等级</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Minimum level at which a player can get the quest.'"
+              [tooltip]="'Minimum level at which a player can get the quest. 玩家获得任务的最低等级。'"
             ></i>
             <input [formControlName]="'MinLevel'" id="MinLevel" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="QuestSortID">QuestSortID</label>
+            <label class="control-label" for="QuestSortID">QuestSortID 序号</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Defines under which category the quest falls in the quest log. Value taken from (if > 0) AreaTable.dbc or (if < 0) QuestSort.dbc'"
+              [tooltip]="'Defines under which category the quest falls in the quest log. Value taken from (if > 0) AreaTable.dbc or (if < 0) QuestSort.dbc 定义任务在任务日志中属于哪个类别。取自可表(如果>)的值。dbc或(如果< 0)查询排序.dbc'"
             ></i>
             <input [formControlName]="'QuestSortID'" id="QuestSortID" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="QuestInfoID">QuestInfoID</label>
+            <label class="control-label" for="QuestInfoID">QuestInfoID 信息id</label>
             <keira-single-value-selector-btn
               [control]="editorService.form.controls.QuestInfoID"
               [config]="{ options: QUEST_INFO, name: 'QuestInfoID' }"
@@ -84,16 +84,16 @@
             ></keira-single-value-selector-btn>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'These values are ID taken from QuestInfo.dbc'"
+              [tooltip]="'These values are ID taken from QuestInfo.dbc 这些值是从QuestInfo.dbc中获取的ID'"
             ></i>
             <input [formControlName]="'QuestInfoID'" id="QuestInfoID" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="SuggestedGroupNum">SuggestedGroupNum</label>
+            <label class="control-label" for="SuggestedGroupNum">SuggestedGroupNum 推荐玩家数</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Recommended number of players to do the quest together.'"
+              [tooltip]="'Recommended number of players to do the quest together. 推荐的玩家数量一起做的任务。'"
             ></i>
             <input [formControlName]="'SuggestedGroupNum'" id="SuggestedGroupNum" type="number" class="form-control form-control-sm">
           </div>
@@ -101,7 +101,7 @@
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
             <label class="control-label" for="StartItem">
               <keira-icon [itemId]="editorService.form.controls.StartItem.value"></keira-icon>
-              StartItem
+              StartItem 开始物品
             </label>
             <keira-item-selector-btn
               [control]="editorService.form.controls.StartItem"
@@ -109,13 +109,13 @@
             ></keira-item-selector-btn>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Items given by the quest giver at beginning of the quest. They will be deleted when quest is abandoned.'"
+              [tooltip]="'Items given by the quest giver at beginning of the quest. They will be deleted when quest is abandoned. 任务给予者在任务开始时给予的物品。当任务被放弃时，它们将被删除。'"
             ></i>
             <input [formControlName]="'StartItem'" id="StartItem" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="Flags">Flags</label>
+            <label class="control-label" for="Flags">Flags 标记</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.Flags"
               [config]="{ flags: QUEST_FLAGS, name: 'Flags' }"
@@ -124,16 +124,16 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="TimeAllowed">TimeAllowed</label>
+            <label class="control-label" for="TimeAllowed">TimeAllowed 需要的时间</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Time (in seconds) that the player has to complete this quest'"
+              [tooltip]="'Time (in seconds) that the player has to complete this quest 玩家完成此任务所需的时间(以秒为单位)'"
             ></i>
             <input [formControlName]="'TimeAllowed'" id="TimeAllowed" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="AllowableRaces">AllowableRaces</label>
+            <label class="control-label" for="AllowableRaces">AllowableRaces 允许种族</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.AllowableRaces"
               [config]="{ flags: ALLOWABLE_RACES, name: 'AllowableRaces' }"
@@ -147,10 +147,10 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredPlayerKills">RequiredPlayerKills</label>
+            <label class="control-label" for="RequiredPlayerKills">RequiredPlayerKills 需要玩家杀死</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'How many players you need to kill in order to complete the quest.'"
+              [tooltip]="'How many players you need to kill in order to complete the quest. 你需要杀死多少玩家才能完成任务。'"
             ></i>
             <input [formControlName]="'RequiredPlayerKills'" id="RequiredPlayerKills" type="number" class="form-control form-control-sm">
           </div>
@@ -160,20 +160,20 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">Point Of Interest</span>
+        <span class="category-title">Point Of Interest 兴趣点</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="POIContinent">POIContinent</label>
+            <label class="control-label" for="POIContinent">POIContinent 兴趣点区域</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'MapId of the Point Of Interest that will be shown on the map when the quest is active'"
+              [tooltip]="'MapId of the Point Of Interest that will be shown on the map when the quest is active 任务激活时地图上显示的感兴趣点的MapId'"
             ></i>
             <input [formControlName]="'POIContinent'" id="POIContinent" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="POIx">POIx</label>
+            <label class="control-label" for="POIx">POIx 兴趣点x</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'X coordinate of the Point Of Interest that will be shown on the map when the quest is active'"
@@ -182,7 +182,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="POIy">POIy</label>
+            <label class="control-label" for="POIy">POIy 兴趣点y</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Y coordinate of the Point Of Interest that will be shown on the map when the quest is active'"
@@ -191,7 +191,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="POIPriority">POIPriority</label>
+            <label class="control-label" for="POIPriority">POIPriority 兴趣点优先级</label>
             <input [formControlName]="'POIPriority'" id="POIPriority" type="number" class="form-control form-control-sm">
           </div>
 
@@ -200,29 +200,29 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">Texts</span>
+        <span class="category-title">Texts 文字</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <label class="control-label" for="QuestCompletionLog">QuestCompletionLog</label>
+            <label class="control-label" for="QuestCompletionLog">QuestCompletionLog 任务完成</label>
             <textarea [formControlName]="'QuestCompletionLog'" id="QuestCompletionLog" class="form-control form-control-sm">
           </textarea>
           </div>
 
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <label class="control-label" for="QuestDescription">QuestDescription</label>
+            <label class="control-label" for="QuestDescription">QuestDescription 任务描述</label>
             <textarea [formControlName]="'QuestDescription'" id="QuestDescription" class="form-control form-control-sm">
           </textarea>
           </div>
 
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <label class="control-label" for="AreaDescription">AreaDescription</label>
+            <label class="control-label" for="AreaDescription">AreaDescription 区域描述</label>
             <textarea [formControlName]="'AreaDescription'" id="AreaDescription" class="form-control form-control-sm">
           </textarea>
           </div>
 
           <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <label class="control-label" for="LogDescription">LogDescription</label>
+            <label class="control-label" for="LogDescription">LogDescription 日志描述</label>
             <textarea [formControlName]="'LogDescription'" id="LogDescription" class="form-control form-control-sm">
           </textarea>
           </div>
@@ -241,7 +241,7 @@
             *ngFor="let i of [1,2,3,4]"
             class="form-group col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"
           >
-            <label class="control-label" for="ObjectiveText{{ i }}">ObjectiveText{{ i }}</label>
+            <label class="control-label" for="ObjectiveText{{ i }}">ObjectiveText{{ i }} 目标文本</label>
             <input [formControlName]="'ObjectiveText' + i" id="ObjectiveText{{ i }}" class="form-control form-control-sm">
           </div>
 
@@ -251,7 +251,7 @@
       <div class="content-block">
 
         <span class="category-title">
-        RequiredItems <i class="fas fa-info-circle ml-1" [placement]="'auto'"  [tooltip]="'Items required to complete the quest'"></i>
+        RequiredItems 所需物品<i class="fas fa-info-circle ml-1" [placement]="'auto'"  [tooltip]="'Items required to complete the quest'"></i>
       </span>
         <div class="row">
 
@@ -284,7 +284,7 @@
       <div class="content-block">
 
         <span class="category-title">
-        Required Factions, NpcOrGo <i class="fas fa-info-circle ml-1" [placement]="'auto'"  [tooltip]="'If > 0: creature; if < 0: gameobject'"></i>
+        Required Factions, NpcOrGo 需要声望,NPC或游戏对象<i class="fas fa-info-circle ml-1" [placement]="'auto'"  [tooltip]="'If > 0: creature; if < 0: gameobject 大于0是生物;小于0是gameobject'"></i>
       </span>
         <div class="row">
 
@@ -324,7 +324,7 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">ItemDrops</span>
+        <span class="category-title">ItemDrops 物品掉落</span>
         <div class="row">
 
           <div
@@ -355,25 +355,25 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">Rewards</span>
+        <span class="category-title">Rewards 奖励</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardTitle">RewardTitle</label>
+            <label class="control-label" for="RewardTitle">RewardTitle 奖励标题</label>
             <input [formControlName]="'RewardTitle'" id="RewardTitle" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardTalents">RewardTalents</label>
+            <label class="control-label" for="RewardTalents">RewardTalents 奖励天赋</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Amount of bonus talent points received when completing the quest'"
+              [tooltip]="'Amount of bonus talent points received when completing the quest 完成任务后得到的额外天赋点数'"
             ></i>
             <input [formControlName]="'RewardTalents'" id="RewardTalents" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardArenaPoints">RewardArenaPoints</label>
+            <label class="control-label" for="RewardArenaPoints">RewardArenaPoints 奖励竞技场点数</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Amount of arena points received when completing the quest'"
@@ -382,25 +382,25 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardNextQuest">RewardNextQuest</label>
+            <label class="control-label" for="RewardNextQuest">RewardNextQuest 下一个任务</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The ID of the next quest that will be added automatically when completing the quest'"
+              [tooltip]="'The ID of the next quest that will be added automatically when completing the quest 完成任务时自动添加的下一个任务的ID'"
             ></i>
             <input [formControlName]="'RewardNextQuest'" id="RewardNextQuest" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardXPDifficulty">RewardXPDifficulty</label>
+            <label class="control-label" for="RewardXPDifficulty">RewardXPDifficulty奖励经验等级</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'According to the Level, the basic experience with index RewardXPDifficulty is taken from QuestXP.dbc. Check the docs for more info.'"
+              [tooltip]="'According to the Level, the basic experience with index RewardXPDifficulty is taken from QuestXP.dbc. Check the docs for more info. 根据难度等级，指标奖励的基本经验来源于QuestXP.dbc。查看文档了解更多信息。'"
             ></i>
             <input [formControlName]="'RewardXPDifficulty'" id="RewardXPDifficulty" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardMoney">RewardMoney</label>
+            <label class="control-label" for="RewardMoney">RewardMoney 奖励金币</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'If value > 0: money earned by completing the quest; if value < 0: money required to complete the quest'"
@@ -409,24 +409,24 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardBonusMoney">RewardBonusMoney</label>
+            <label class="control-label" for="RewardBonusMoney">RewardBonusMoney 额外金币</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The money a character at level 80 would get when they complete this quest.'"
+              [tooltip]="'The money a character at level 80 would get when they complete this quest. 80级人物完成此任务后将获得的金钱。'"
             ></i>
             <input [formControlName]="'RewardBonusMoney'" id="RewardBonusMoney" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardDisplaySpell">RewardDisplaySpell</label>
+            <label class="control-label" for="RewardDisplaySpell">RewardDisplaySpell 奖励法术</label>
             <input [formControlName]="'RewardDisplaySpell'" id="RewardDisplaySpell" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardSpell">RewardSpell</label>
+            <label class="control-label" for="RewardSpell">RewardSpell 奖励法术<</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if RewardSpellCast is non-zero.'"
+              [tooltip]="'Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if RewardSpellCast is non-zero. 任务记录中任务完成时显示的法术。注意，如果施法的奖励不为零，这个法术将不会被施法。'"
             ></i>
             <keira-spell-selector-btn
               [control]="editorService.form.controls.RewardSpell"
@@ -437,7 +437,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardHonor">RewardHonor</label>
+            <label class="control-label" for="RewardHonor">RewardHonor 奖励荣誉</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Number of honorable kill honor rewarded for completing this quest'"
@@ -446,7 +446,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardKillHonor">RewardKillHonor</label>
+            <label class="control-label" for="RewardKillHonor">RewardKillHonor 奖励荣誉击杀</label>
             <input [formControlName]="'RewardKillHonor'" id="RewardKillHonor" type="number" class="form-control form-control-sm">
           </div>
 
@@ -455,7 +455,7 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">RewardItems</span>
+        <span class="category-title">RewardItems 奖励物品</span>
         <div class="row">
 
           <div
@@ -486,7 +486,7 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">RewardChoiceItems</span>
+        <span class="category-title">RewardChoiceItems 奖励选择物品</span>
         <div class="row">
 
           <div
@@ -518,7 +518,7 @@
       <div class="content-block">
 
         <span class="category-title">
-          RewardFactions <i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'Faction ID for which the quest adds (or subtracts) reputation points.'"></i>
+          RewardFactions 奖励声望<i class="fas fa-info-circle ml-1" [placement]="'auto'" [tooltip]="'Faction ID for which the quest adds (or subtracts) reputation points.'"></i>
         </span>
         <div class="row">
 
@@ -528,7 +528,7 @@
           >
             <div class="row">
               <div class="col-12">
-                <label class="control-label" for="RewardFactionID{{ i }}">Rew.FactionID{{ i }}</label>
+                <label class="control-label" for="RewardFactionID{{ i }}">Rew.FactionID{{ i }} 声望id</label>
                 <keira-faction-selector-btn
                   [config]="{ name: 'RewardFactionID' + i }"
                   [control]="editorService.form.controls['RewardFactionID' + i]"
@@ -536,11 +536,11 @@
                 <input [formControlName]="'RewardFactionID' + i" id="RewardFactionID{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="RewardFactionValue{{ i }}">Rew.FactionValue{{ i }}</label>
+                <label class="control-label" for="RewardFactionValue{{ i }}">Rew.FactionValue{{ i }} 声望值</label>
                 <input [formControlName]="'RewardFactionValue' + i" id="RewardFactionValue{{ i }}" type="number" class="form-control form-control-sm">
               </div>
               <div class="col-12">
-                <label class="control-label" for="RewardFactionOverride{{ i }}">Rew.FactionOverride{{ i }}</label>
+                <label class="control-label" for="RewardFactionOverride{{ i }}">Rew.FactionOverride{{ i }} 声望覆盖</label>
                 <input [formControlName]="'RewardFactionOverride' + i" id="RewardFactionOverride{{ i }}" type="number" class="form-control form-control-sm">
               </div>
             </div>

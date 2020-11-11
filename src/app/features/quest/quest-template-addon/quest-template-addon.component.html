@@ -18,7 +18,7 @@
 
       <div class="content-block">
 
-        <span class="category-title">Addon Base</span>
+        <span class="category-title">Addon Base 基础</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
@@ -31,7 +31,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="PrevQuestID">PrevQuestID</label>
+            <label class="control-label" for="PrevQuestID">PrevQuestID 上一个任务</label>
             <keira-quest-selector-btn
               [control]="editorService.form.controls.PrevQuestID"
               [config]="{ name: 'PrevQuestID' }"
@@ -39,13 +39,13 @@
             ></keira-quest-selector-btn>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'if > 0: previous quest id; if < 0 parent quest id'"
+              [tooltip]="'if > 0: previous quest id; if < 0 parent quest id 如果大于0:上一个任务id;如果小于0:父任务id'"
             ></i>
             <input [formControlName]="'PrevQuestID'" id="PrevQuestID" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="NextQuestID">NextQuestID</label>
+            <label class="control-label" for="NextQuestID">NextQuestID 下一个任务</label>
             <keira-quest-selector-btn
               [control]="editorService.form.controls.NextQuestID"
               [config]="{ name: 'NextQuestID' }"
@@ -59,7 +59,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="MaxLevel">MaxLevel</label>
+            <label class="control-label" for="MaxLevel">MaxLevel 最大等级</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Maximum player level at which a character can get the quest.'"
@@ -68,7 +68,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="AllowableClasses">AllowableClasses</label>
+            <label class="control-label" for="AllowableClasses">AllowableClasses 允许职业</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.AllowableClasses"
               [config]="{ flags: ALLOWABLE_CLASSES, name: 'AllowableClasses' }"
@@ -81,10 +81,10 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="SourceSpellID">SourceSpellID</label>
+            <label class="control-label" for="SourceSpellID">SourceSpellID 起始法术</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'The spell ID cast on player upon starting the quest.'"
+              [tooltip]="'The spell ID cast on player upon starting the quest. 在开始任务时对玩家施放的法术。'"
             ></i>
             <keira-spell-selector-btn
               [control]="editorService.form.controls.SourceSpellID"
@@ -98,22 +98,22 @@
             <label class="control-label" for="ExclusiveGroup">ExclusiveGroup</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'If > 0: group of quests of which only one may be chosen and completed; if < 0  group of quests of which all must be completed and rewarded to start next quest'"
+              [tooltip]="'If > 0: group of quests of which only one may be chosen and completed; if < 0  group of quests of which all must be completed and rewarded to start next quest 大于0:一组只有一个可以被选择和完成的任务;如果必须完成并奖励;小于0组任务才能开始下一个任务'"
             ></i>
             <input [formControlName]="'ExclusiveGroup'" id="ExclusiveGroup" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="ProvidedItemCount">ProvidedItemCount</label>
+            <label class="control-label" for="ProvidedItemCount">ProvidedItemCount 提供物品数量</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Number of items given to the player (inserted in the player’s bags) upon accepting the quest.'"
+              [tooltip]="'Number of items given to the player (inserted in the player’s bags) upon accepting the quest. 在接受任务时给予玩家(插入玩家包中的)物品的数量。'"
             ></i>
             <input [formControlName]="'ProvidedItemCount'" id="ProvidedItemCount" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="SpecialFlags">SpecialFlags</label>
+            <label class="control-label" for="SpecialFlags">SpecialFlags 特殊的标志</label>
             <keira-flags-selector-btn
               [control]="editorService.form.controls.SpecialFlags"
               [config]="{ flags: SPECIAL_FLAGS, name: 'SpecialFlags' }"
@@ -126,14 +126,14 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">Addon Requirements</span>
+        <span class="category-title">Addon Requirements 需求</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredSkillID">Req.SkillID</label>
+            <label class="control-label" for="RequiredSkillID">Req.SkillID 技能要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Skill required to know to accept the quest. Use 0 for no skill required.'"
+              [tooltip]="'Skill required to know to accept the quest. Use 0 for no skill required. 接受任务所需要的技能。使用0表示没有技能要求。'"
             ></i>
             <keira-skill-selector-btn
               [config]="{ name: 'RequiredSkillID' }"
@@ -143,16 +143,16 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredSkillPoints">Req.SkillPoints</label>
+            <label class="control-label" for="RequiredSkillPoints">Req.SkillPoints 技能点要求</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
-              [tooltip]="'Skill points required to have in order to accept the quest.'"
+              [tooltip]="'Skill points required to have in order to accept the quest. 接受任务所需要的技能点。'"
             ></i>
             <input [formControlName]="'RequiredSkillPoints'" id="RequiredSkillPoints" type="number" class="form-control form-control-sm">
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredMinRepFaction">Req.MinRepFaction</label>
+            <label class="control-label" for="RequiredMinRepFaction">Req.MinRepFaction 最小声望</label>
             <keira-faction-selector-btn
               [config]="{ name: 'RequiredMinRepFaction' }"
               [control]="editorService.form.controls.RequiredMinRepFaction"
@@ -161,7 +161,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredMinRepValue">Req.MinRepValue</label>
+            <label class="control-label" for="RequiredMinRepValue">Req.MinRepValue 最小声望值</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Players must have this reputation or higher in order to receive the quest.'"
@@ -170,7 +170,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredMaxRepFaction">Req.MaxRepFaction</label>
+            <label class="control-label" for="RequiredMaxRepFaction">Req.MaxRepFaction 最大声望</label>
             <keira-faction-selector-btn
               [config]="{ name: 'RequiredMaxRepFaction' }"
               [control]="editorService.form.controls.RequiredMaxRepFaction"
@@ -179,7 +179,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RequiredMaxRepValue">Req.MaxRepValue</label>
+            <label class="control-label" for="RequiredMaxRepValue">Req.MaxRepValue 最大声望值</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'The maximum reputation value that the player can have with a faction and still get the quest.'"
@@ -192,11 +192,11 @@
       </div>
       <div class="content-block">
 
-        <span class="category-title">Addon Rewards</span>
+        <span class="category-title">Addon Rewards 奖励</span>
         <div class="row">
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardMailTemplateID">RewardMailTemplateID</label>
+            <label class="control-label" for="RewardMailTemplateID">RewardMailTemplateID 邮件模板</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Corresponds to the loot template in quest_mail_loot_template; items will be sent by mail at quest completion'"
@@ -205,7 +205,7 @@
           </div>
 
           <div class="form-group col-12 col-sm-6 col-md-5 col-lg-4 col-xl-2">
-            <label class="control-label" for="RewardMailDelay">RewardMailDelay</label>
+            <label class="control-label" for="RewardMailDelay">RewardMailDelay 邮件延迟</label>
             <i
               class="fas fa-info-circle ml-1" [placement]="'auto'"
               [tooltip]="'Delay (in seconds) after which the mail is sent to the character (defined in RewardMailTemplateId)'"

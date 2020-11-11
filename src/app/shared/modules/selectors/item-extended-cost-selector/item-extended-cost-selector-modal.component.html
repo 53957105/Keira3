@@ -1,6 +1,6 @@
 <div class="modal-body">
 
-  <p class="lead text-center mb-1">ItemExtendedCost selector</p>
+  <p class="lead text-center mb-1">ItemExtendedCost selector 物品售价选择器</p>
 
   <form [formGroup]="searchService.queryForm">
     <div class="row">
@@ -9,35 +9,35 @@
           <input [formControlName]="'id'" type="number" class="form-control form-control-sm" id="id" placeholder="id">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqHonorPoints'" type="number" class="form-control form-control-sm" id="reqHonorPoints" placeholder="reqHonorPoints">
+          <input [formControlName]="'reqHonorPoints'" type="number" class="form-control form-control-sm" id="reqHonorPoints" placeholder="reqHonorPoints 荣誉">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqArenaPoints'" type="number" class="form-control form-control-sm" id="reqArenaPoints" placeholder="reqArenaPoints">
+          <input [formControlName]="'reqArenaPoints'" type="number" class="form-control form-control-sm" id="reqArenaPoints" placeholder="reqArenaPoints 竞技场点数">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqArenaSlot'" type="number" class="form-control form-control-sm" id="reqArenaSlot" placeholder="reqArenaSlot">
+          <input [formControlName]="'reqArenaSlot'" type="number" class="form-control form-control-sm" id="reqArenaSlot" placeholder="reqArenaSlot 竞技场排名">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqItemId1'" type="number" class="form-control form-control-sm" id="reqItemId1" placeholder="reqItemId1">
+          <input [formControlName]="'reqItemId1'" type="number" class="form-control form-control-sm" id="reqItemId1" placeholder="reqItemId1 物品1">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqItemId2'" type="number" class="form-control form-control-sm" id="reqItemId2" placeholder="reqItemId2">
+          <input [formControlName]="'reqItemId2'" type="number" class="form-control form-control-sm" id="reqItemId2" placeholder="reqItemId2 物品2">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqItemId3'" type="number" class="form-control form-control-sm" id="reqItemId3" placeholder="reqItemId3">
+          <input [formControlName]="'reqItemId3'" type="number" class="form-control form-control-sm" id="reqItemId3" placeholder="reqItemId3 物品3">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqItemId4'" type="number" class="form-control form-control-sm" id="reqItemId4" placeholder="reqItemId4">
+          <input [formControlName]="'reqItemId4'" type="number" class="form-control form-control-sm" id="reqItemId4" placeholder="reqItemId4 物品4">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqItemId5'" type="number" class="form-control form-control-sm" id="reqItemId5" placeholder="reqItemId5">
+          <input [formControlName]="'reqItemId5'" type="number" class="form-control form-control-sm" id="reqItemId5" placeholder="reqItemId5 物品5">
         </div>
         <div class="form-group col-4 col-md-3 col-lg-2">
-          <input [formControlName]="'reqPersonalRating'" type="number" class="form-control form-control-sm" id="reqPersonalRating" placeholder="reqPersonalRating">
+          <input [formControlName]="'reqPersonalRating'" type="number" class="form-control form-control-sm" id="reqPersonalRating" placeholder="reqPersonalRating 个人排名">
         </div>
       </ng-container>
       <div class="form-group col-2">
-        <input [formControlName]="'limit'" class="form-control form-control-sm" id="limit" placeholder="Unlimited">
+        <input [formControlName]="'limit'" class="form-control form-control-sm" id="limit" placeholder="Unlimited 查询个数">
       </div>
       <div class="col-2">
         <keira-search-button [searchService]="searchService"></keira-search-button>
@@ -64,26 +64,26 @@
           {{ row.id }}
         </ng-template>
       </ngx-datatable-column>
-      <ngx-datatable-column name="HonorPoints" prop="reqHonorPoints"></ngx-datatable-column>
-      <ngx-datatable-column name="ArenaPoints" prop="reqArenaPoints"></ngx-datatable-column>
-      <ngx-datatable-column name="ArenaSlot" prop="reqArenaSlot"></ngx-datatable-column>
-      <ngx-datatable-column name="Pers.Rating" prop="reqPersonalRating"></ngx-datatable-column>
-      <ngx-datatable-column name="Item1" prop="reqItemId1"></ngx-datatable-column>
-      <ngx-datatable-column name="Count1" prop="itemCount1"></ngx-datatable-column>
-      <ngx-datatable-column name="Item2" prop="reqItemId2"></ngx-datatable-column>
-      <ngx-datatable-column name="Count2" prop="itemCount2"></ngx-datatable-column>
-      <ngx-datatable-column name="Item3" prop="reqItemId3"></ngx-datatable-column>
-      <ngx-datatable-column name="Count3" prop="itemCount3"></ngx-datatable-column>
-      <ngx-datatable-column name="Item4" prop="reqItemId4"></ngx-datatable-column>
-      <ngx-datatable-column name="Count4" prop="itemCount4"></ngx-datatable-column>
-      <ngx-datatable-column name="Item5" prop="reqItemId5"></ngx-datatable-column>
-      <ngx-datatable-column name="Count5" prop="itemCount5"></ngx-datatable-column>
+      <ngx-datatable-column name="荣誉" prop="reqHonorPoints"></ngx-datatable-column>
+      <ngx-datatable-column name="竞技场点数" prop="reqArenaPoints"></ngx-datatable-column>
+      <ngx-datatable-column name="竞技场排名" prop="reqArenaSlot"></ngx-datatable-column>
+      <ngx-datatable-column name="个人排名" prop="reqPersonalRating"></ngx-datatable-column>
+      <ngx-datatable-column name="物品1" prop="reqItemId1"></ngx-datatable-column>
+      <ngx-datatable-column name="数量1" prop="itemCount1"></ngx-datatable-column>
+      <ngx-datatable-column name="物品2" prop="reqItemId2"></ngx-datatable-column>
+      <ngx-datatable-column name="数量2" prop="itemCount2"></ngx-datatable-column>
+      <ngx-datatable-column name="物品3" prop="reqItemId3"></ngx-datatable-column>
+      <ngx-datatable-column name="数量3" prop="itemCount3"></ngx-datatable-column>
+      <ngx-datatable-column name="物品4" prop="reqItemId4"></ngx-datatable-column>
+      <ngx-datatable-column name="数量4" prop="itemCount4"></ngx-datatable-column>
+      <ngx-datatable-column name="物品5" prop="reqItemId5"></ngx-datatable-column>
+      <ngx-datatable-column name="数量5" prop="itemCount5"></ngx-datatable-column>
     </ngx-datatable>
 
   </div>
 </div>
 
 <div class="modal-footer">
-  <button type="button" class="btn btn-danger" id="modal-cancel-btn" (click)="onCancel()">Cancel</button>
-  <button type="button" class="btn btn-success" id="modal-select-btn" (click)="onSave()">Select</button>
+  <button type="button" class="btn btn-danger" id="modal-cancel-btn" (click)="onCancel()">取消</button>
+  <button type="button" class="btn btn-success" id="modal-select-btn" (click)="onSave()">选择</button>
 </div>
