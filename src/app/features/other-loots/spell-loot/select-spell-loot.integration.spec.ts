@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
@@ -19,7 +19,7 @@ describe('SelectSpellLoot integration tests', () => {
 
   const value = 1200;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         SpellLootTemplateModule,
@@ -50,7 +50,7 @@ describe('SelectSpellLoot integration tests', () => {
     return { component, fixture, selectService, page, queryService, querySpy, navigateSpy };
   }
 
-  it('should correctly initialise', async () => {
+  it('should correctly initialise', waitForAsync(async () => {
     const { fixture, page, querySpy, component } = setup();
 
     await fixture.whenStable();
@@ -62,9 +62,9 @@ describe('SelectSpellLoot integration tests', () => {
     expect(page.queryWrapper.innerText).toContain(
       'SELECT `Entry` FROM `spell_loot_template` GROUP BY Entry LIMIT 50'
     );
-  });
+  }));
 
-  it('should correctly behave when inserting and selecting free entry', async () => {
+  it('should correctly behave when inserting and selecting free entry', waitForAsync(async () => {
     const { fixture, page, querySpy, navigateSpy } = setup();
 
     await fixture.whenStable();
@@ -85,9 +85,9 @@ describe('SelectSpellLoot integration tests', () => {
     expect(navigateSpy).toHaveBeenCalledWith(['other-loots/spell']);
     page.expectTopBarCreatingNew(value);
 
-  });
+  }));
 
-  it('should correctly behave when inserting an existing entity', async () => {
+  it('should correctly behave when inserting an existing entity', waitForAsync(async () => {
     const { fixture, page, querySpy } = setup();
 
     await fixture.whenStable();
@@ -101,7 +101,7 @@ describe('SelectSpellLoot integration tests', () => {
       `SELECT * FROM \`spell_loot_template\` WHERE (Entry = ${value})`
     );
     page.expectEntityAlreadyInUse();
-  });
+  }));
 
   for (const { id, entry, limit, expectedQuery } of [
     {
